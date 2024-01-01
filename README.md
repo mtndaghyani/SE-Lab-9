@@ -5,7 +5,6 @@
 ![9 3](https://github.com/mtndaghyani/SE-Lab-9/assets/63471751/aac342f9-1436-4a8e-ade3-f1d0e4ee7979)
 
 
-![9 4](https://github.com/mtndaghyani/SE-Lab-9/assets/63471751/19cdc68c-15ff-4a04-8890-4d851a675911)
 
 ![9 5](https://github.com/mtndaghyani/SE-Lab-9/assets/63471751/486ae704-95a7-48de-b675-bd32f8350676)
 
