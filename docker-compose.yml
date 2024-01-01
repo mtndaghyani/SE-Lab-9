@@ -23,8 +23,10 @@ services:
       dockerfile: ./Dockerfile
     networks:
       - selab__net
+    restart: always
 
   nginx:
+    image: nginx:latest
     depends_on:
       - app
     ports:
