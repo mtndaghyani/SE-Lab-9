@@ -1,0 +1,42 @@
+version: "3.8"
+
+services:
+
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    cap_add:
+      - SYS_NICE
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=Simple
+    volumes:
+      - db:/var/lib/mysql
+    networks:
+      - selab__net
+
+  app:
+    depends_on:
+      - db
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    networks:
+      - selab__net
+
+  nginx:
+    depends_on:
+      - app
+    ports:
+      - "8000:8000"
+    restart:
+      always
+    networks:
+      - selab__net
+
+volumes:
+  db:
+    driver: local
+
+networks:
+  selab__net:
